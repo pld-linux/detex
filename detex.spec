@@ -1,5 +1,5 @@
 Summary:	TeX/LaTeX to ASCII converter
-Summary(pl):	Konwerter TeXa/LaTexa na ASCII
+Summary(pl):	Konwerter TeXa/LaTeXa na ASCII
 Name:		detex
 Version:	2.7
 Release:	1
@@ -19,7 +19,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 detex is filter to strip TeX/LaTeX commands.
 
 %description -l pl
-detex jest filtrem usuwaj±cy makra TeXa/LaTexa.
+detex jest filtrem usuwaj±cy makra TeXa/LaTeXa.
 
 %prep
 %setup -q -c
@@ -27,15 +27,19 @@ detex jest filtrem usuwaj±cy makra TeXa/LaTexa.
 %patch1 -p1
 
 %build
-%{__make}
+%{__make} \
+	CC="%{__cc}" \
+	CFLAGS="%{rpmcflags} \${DEFS}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
-install -s detex $RPM_BUILD_ROOT%{_bindir}
-(cd $RPM_BUILD_ROOT%{_bindir}; ln -s detex delatex)
+
+install detex $RPM_BUILD_ROOT%{_bindir}
+ln -sf detex $RPM_BUILD_ROOT%{_bindir}/delatex
+
 install detex.1l $RPM_BUILD_ROOT%{_mandir}/man1/detex.1
-(cd $RPM_BUILD_ROOT%{_mandir}/man1; ln -s detex.1 delatex.1)
+echo '.so detex.1' > $RPM_BUILD_ROOT%{_mandir}/man1/delatex.1
 
 %clean
 rm -rf $RPM_BUILD_ROOT
