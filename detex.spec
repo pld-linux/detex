@@ -8,6 +8,7 @@ License:	distributable
 Group:		Applications/Text
 Source0:	ftp://distfiles.pld-linux.org/src/%{name}-%{version}.tar.gz
 # Source0-md5:	22cbca475eedb39deee64e126dfd5ddb
+
 Patch0:		%{name}-suse.patch
 Patch1:		%{name}-install.patch
 URL:		http://www.cs.purdue.edu/homes/trinkle/detex/
