@@ -1,0 +1,12 @@
+diff -urN detex-2.7.orig/Makefile detex-2.7/Makefile
+--- detex-2.7.orig/Makefile	Wed May 12 19:45:55 1999
++++ detex-2.7/Makefile	Fri Sep 19 05:57:56 2003
+@@ -85,7 +85,7 @@
+ # this target
+ install: detex
+ 	rm -f ${DESTDIR}/detex
+-	install -c -m 775 -o binary -g staff -s detex ${DESTDIR}
++	install -c -m 755 -s detex ${DESTDIR}
+ #	rm -f ${DESTDIR}/delatex
+ #	ln ${DESTDIR}/detex ${DESTDIR}/delatex
+ 
