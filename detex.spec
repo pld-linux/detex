@@ -11,7 +11,7 @@ Source0:	ftp://distfiles.pld-linux.org/src/%{name}-%{version}.tar.gz
 Patch0:		%{name}-suse.patch
 Patch1:		%{name}-install.patch
 URL:		http://www.cs.purdue.edu/homes/trinkle/detex/
-BuildRequires:	flex
+BuildRequires:	flex >= 2.5.31-6
 Provides:	deTeX
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
