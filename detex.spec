@@ -1,5 +1,5 @@
 Summary:	TeX/LaTeX to ASCII converter
-Summary(pl):	Konwerter TeX-a/LaTex-a na ASCII
+Summary(pl):	Konwerter TeXa/LaTexa na ASCII
 Name:		detex
 Version:	2.7
 Release:	1
@@ -19,7 +19,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 detex is filter to strip TeX/LaTeX commands.
 
 %description -l pl
-detex jest filtrem usuwaj±cy makra TeX-a/LaTex-a .
+detex jest filtrem usuwaj±cy makra TeXa/LaTexa.
 
 %prep
 %setup -q -c
