@@ -19,7 +19,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 detex is filter to strip TeX/LaTeX commands.
 
 %description -l pl
-detex jest filtrem usuwaj±cy makra TeXa/LaTeXa.
+detex jest filtrem usuwaj±cym makra TeXa/LaTeXa.
 
 %prep
 %setup -q -c
