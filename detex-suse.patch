@@ -1,0 +1,40 @@
+--- detex-2.7/Makefile
++++ detex-2.7/Makefile
+@@ -17,7 +17,7 @@
+ # Compile time flags, just uncomment the necessary lines
+ # Some say GNU make does not correctly handle += -- you may have to use :=
+ #
+-DEFS	=
++#DEFS	=
+ #
+ # Add -traditional for GNU cc on ISC 386/ix system and possibly others
+ # (reported by pinard@iro.umontreal.ca)
+@@ -26,7 +26,7 @@
+ #
+ # Add -DHAVE_STRING_H for the SysV string manipulation routines
+ #
+-#DEFS	+= ${DEFS} -DHAVE_STRING_H
++DEFS	=  -DHAVE_STRING_H
+ #
+ # Add -DMAXPATHLEN=<length> if it is not defined in /usr/include/sys/param.h
+ #
+@@ -67,7 +67,7 @@
+ all:	${PROGS}
+ 
+ detex: ${D_OBJ}
+-	${CC} ${CFLAGS} -o $@ ${D_OBJ} -ll
++	${CC} ${CFLAGS} -o $@ ${D_OBJ} -lfl
+ 
+ detex.c:
+ 	sed -f states.sed detex.l > xxx.l
+--- detex-2.7/detex.h
++++ detex-2.7/detex.h
+@@ -21,7 +21,7 @@
+ #define	DEFAULTINPUTS	".:/usr/local/tex/inputs"
+ #define	CHPATHSEP	':'
+ #endif
+-#define	MAXINPUTPATHS	10
++#define	MAXINPUTPATHS	30
+ 
+ #define	DEFAULTENV	"array,eqnarray,equation,figure,mathmatica,picture,table,verbatim"
+ #define	CHENVSEP	','
