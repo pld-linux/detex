@@ -1,5 +1,5 @@
 Summary:	TeX/LaTeX to ASCII converter
-Summary(pl.UTF-8):   Konwerter TeXa/LaTeXa na ASCII
+Summary(pl.UTF-8):	Konwerter TeXa/LaTeXa na ASCII
 Name:		detex
 Version:	2.7
 Release:	1
